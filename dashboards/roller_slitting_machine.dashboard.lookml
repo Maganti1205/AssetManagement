@@ -7,7 +7,7 @@
   elements:
   - title: Machine Overview
     name: Machine Overview
-    model: mde-cortex-demo
+    model: asset-magagement
     explore: oee
     type: looker_bar
     fields: [availability, performance, quality]
@@ -88,7 +88,7 @@
     height: 2
   - title: RUL for Latest Cycle
     name: RUL for Latest Cycle
-    model: mde-cortex-demo
+    model: asset-management
     explore: oee
     type: looker_grid
     fields: [material_name, cycle, action, ideal_rul, predicted_rul]
@@ -182,7 +182,7 @@
     height: 5
   - title: Temperature Trends for defective components
     name: Temperature Trends for defective components
-    model: mde-cortex-demo
+    model: asset-management
     explore: RUL
     type: looker_line
     fields: [RUL.temperature, RUL.cycle]
@@ -232,7 +232,7 @@
     height: 6
   - title: Pressure Trends for defective components
     name: Pressure Trends for defective components
-    model: mde-cortex-demo
+    model: asset-management
     explore: RUL
     type: looker_line
     fields: [RUL.pressure, RUL.cycle]
@@ -282,7 +282,7 @@
     height: 6
   - title: Predicted RUL for defective Component
     name: Predicted RUL for defective Component
-    model: mde-cortex-demo
+    model: asset-management
     explore: RUL
     type: looker_line
     fields: [RUL.predicted_rul, RUL.cycle]
@@ -327,7 +327,7 @@
     height: 6
   - title: Inventory Details
     name: Inventory Details
-    model: mde-cortex-demo
+    model: asset-management
     explore: Material
     type: looker_grid
     fields: [Material.createdon_, Material.material, Material.updatedon, action, predicted_rul,
