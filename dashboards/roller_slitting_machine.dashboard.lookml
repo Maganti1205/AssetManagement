@@ -7,7 +7,7 @@
   elements:
   - title: Machine Overview
     name: Machine Overview
-    model: asset-magagement
+    model: asset-management
     explore: oee
     type: looker_bar
     fields: [availability, performance, quality]

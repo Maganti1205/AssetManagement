@@ -1,6 +1,6 @@
 view: Material {
   derived_table: {
-    sql: SELECT * FROM `my-demo-project-360918.bq_pubsub.Materials`
+    sql: SELECT * FROM `general-demo-364117.Asset_Management_Demo.Materials`
       ;;
   }
 
