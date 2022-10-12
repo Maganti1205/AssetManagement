@@ -31,12 +31,7 @@ view: Material {
     sql: ${TABLE}.Updatedon ;;
   }
 
-  dimension: state {
-    map_layer_name: us_states
-    sql: ${TABLE}.state ;;
-  }
-
   set: detail {
-    fields: [material, quantity, createdon_, updatedon, state]
+    fields: [material, quantity, createdon_, updatedon]
   }
 }
