@@ -14,7 +14,7 @@ view: states {
   }
 
   dimension: zip {
-    type: number
+    type: zipcode
     sql: ${TABLE}.zip ;;
   }
 
