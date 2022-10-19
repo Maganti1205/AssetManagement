@@ -1,10 +1,10 @@
 view: states {
   derived_table: {
-    sql: Select 08550 as zip
+    sql: Select '08550' as zip
       union all
-      select 77494 as zip
+      select '77494' as zip
       union all
-      select 99314 as zip
+      select '93314' as zip
        ;;
   }
 
