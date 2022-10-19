@@ -1,10 +1,10 @@
 view: states {
   derived_table: {
-    sql: Select '08550' as zip
+    sql: Select '08550' as zip , 900 as Assets
       union all
-      select '77494' as zip
+      select '77494' as zip, 800 as Assets
       union all
-      select '93314' as zip
+      select '93314' as zip, 1000 as Assets
        ;;
   }
 
@@ -17,8 +17,12 @@ view: states {
     type: zipcode
     sql: ${TABLE}.zip ;;
   }
+  dimension: Assets {
+    type: number
+    sql: ${TABLE}.Assets ;;
+  }
 
   set: detail {
-    fields: [zip]
+    fields: [zip,Assets]
   }
 }
