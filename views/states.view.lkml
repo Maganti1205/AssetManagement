@@ -9,10 +9,7 @@ view: states {
       ;;
   }
 
-  measure: count {
-    type: count
-    drill_fields: [detail*]
-  }
+
 
   dimension: zip {
     type: zipcode
@@ -21,7 +18,4 @@ view: states {
 
 
 
-  set: detail {
-    fields: [zip]
-  }
 }
