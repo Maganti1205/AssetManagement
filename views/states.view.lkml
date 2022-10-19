@@ -16,7 +16,7 @@ view: states {
 
   dimension: zip {
     type: zipcode
-    sql: ${TABLE}.Material ;;
+    sql: ${TABLE}.states ;;
   }
 
 
