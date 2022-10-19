@@ -1,16 +1,27 @@
 view: states {
+  derived_table: {
+    sql: SELECT 08550 as zip
+         Union all
+        Select 77494 as zip
+        union all
+        select 93314 as zip
 
+      ;;
+  }
 
   measure: count {
     type: count
     drill_fields: [detail*]
   }
 
-  dimension: state {
-    map_layer_name: us_states
-    sql: ${TABLE}.state ;;
+  dimension: zip {
+    type: zipcode
+    sql: ${TABLE}.Material ;;
   }
+
+
+
   set: detail {
-    fields: [state]
+    fields: [zip]
   }
 }
