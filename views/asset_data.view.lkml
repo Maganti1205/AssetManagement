@@ -28,7 +28,7 @@ view: asset_data {
 
   dimension: location {
     type: location
-    sql_latitude: ${usa_state_longitude} ;;
+    sql_latitude: ${usa_state_latitude} ;;
     sql_longitude: ${usa_state_longitude} ;;
   }
 
