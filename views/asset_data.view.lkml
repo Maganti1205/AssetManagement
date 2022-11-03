@@ -26,6 +26,17 @@ view: asset_data {
     sql: ${TABLE}.zip ;;
   }
 
+  dimension: state {
+    map_layer_name: us_states
+    sql: ${TABLE}.state ;;
+  }
+
+  dimension: zipcodes {
+    map_layer_name: us_zipcode_tabulation_areas
+    sql: ${TABLE}.state ;;
+  }
+
+
   measure: count {
     type: count
     drill_fields: []
