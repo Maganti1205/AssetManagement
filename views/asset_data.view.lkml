@@ -21,7 +21,7 @@ view: asset_data {
     map_layer_name: us_states
     sql: ${TABLE}.state_id ;;
     link: {
-      label: "City Metrics Explore"
+      label: "Asset Details Explore"
       url:  "https://imde.cloud.looker.com/dashboards/406?State+ID=AZ"
   }
 }
