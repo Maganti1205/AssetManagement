@@ -18,27 +18,20 @@ view: asset_data {
 
   dimension: state_id {
     type: string
+    map_layer_name: us_states
     sql: ${TABLE}.state_id ;;
   }
 
   dimension: zip {
     type: zipcode
+    map_layer_name: us_zipcode_tabulation_areas
     sql: ${TABLE}.zip ;;
   }
 
-  dimension: state {
-    map_layer_name: us_states
-    sql: ${TABLE}.state ;;
-  }
-
-  dimension: zipcodes {
-    map_layer_name: us_zipcode_tabulation_areas
-    sql: ${TABLE}.state ;;
-  }
 
 
   measure: count {
     type: count
-    drill_fields: [state,state_id,zip,zipcodes,asset_id]
+    drill_fields: [state_id,zip,asset_id]
   }
 }
