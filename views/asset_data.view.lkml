@@ -26,9 +26,10 @@ view: asset_data {
     sql: ${TABLE}.usa_state_code ;;
   }
 
-  dimension: usa_state_latitude {
-    type: number
-    sql: ${TABLE}.usa_state_latitude ;;
+  dimension: location {
+    sql_latitude: ${usa_state_longitude} ;;
+    sql_longitude: ${usa_state_longitude} ;;
+    sql: ${TABLE}.location ;;
   }
 
   # A measure is a field that uses a SQL aggregate function. Here are defined sum and average
@@ -39,9 +40,13 @@ view: asset_data {
     type: number
     sql: ${TABLE}.usa_state_longitude ;;
   }
+  dimension: usa_state_latitude {
+    type: number
+    sql: ${TABLE}.usa_state_latitude ;;
+  }
 
   measure: count {
     type: count
-    drill_fields: [asset_id,usa_state,usa_state_code,usa_state_latitude,usa_state_longitude]
+    drill_fields: [asset_id,usa_state,usa_state_code,location]
   }
 }
