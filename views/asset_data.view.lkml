@@ -20,8 +20,11 @@ view: asset_data {
     type: string
     map_layer_name: us_states
     sql: ${TABLE}.state_id ;;
+    link: {
+      label: "City Metrics Explore"
+      url:  "https://imde.cloud.looker.com/dashboards/406?State+ID=AZ"
   }
-
+}
   dimension: zip {
     type: zipcode
     map_layer_name: us_zipcode_tabulation_areas
