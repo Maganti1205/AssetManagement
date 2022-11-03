@@ -22,11 +22,6 @@ view: asset_zips {
     type: string
     sql: ${TABLE}.state_id ;;
   }
-  dimension: state {
-    map_layer_name: us_states
-    sql: ${TABLE}.state_id ;;
-  }
-
 
   dimension: country {
     type: string
