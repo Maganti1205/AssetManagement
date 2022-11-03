@@ -28,4 +28,4 @@ persist_with: asset-management_default_datagroup
 explore: oee{}
 explore: RUL{}
 explore: Material{}
-explore: states {}
+explore: asset_zips {}
