@@ -16,25 +16,32 @@ view: asset_data {
     sql: ${TABLE}.Asset_Id ;;
   }
 
-  dimension: state_id {
+  dimension: usa_state {
     type: string
-    map_layer_name: us_states
-    sql: ${TABLE}.state_id ;;
-    link: {
-      label: "Asset Details Explore"
-      url:  "https://imde.cloud.looker.com/dashboards/406?State+ID=AZ"
-  }
-}
-  dimension: zip {
-    type: zipcode
-    map_layer_name: us_zipcode_tabulation_areas
-    sql: ${TABLE}.zip ;;
+    sql: ${TABLE}.usa_state ;;
   }
 
+  dimension: usa_state_code {
+    type: string
+    sql: ${TABLE}.usa_state_code ;;
+  }
 
+  dimension: usa_state_latitude {
+    type: number
+    sql: ${TABLE}.usa_state_latitude ;;
+  }
+
+  # A measure is a field that uses a SQL aggregate function. Here are defined sum and average
+  # measures for this dimension, but you can also add measures of many different aggregates.
+  # Click on the type parameter to see all the options in the Quick Help panel on the right.
+
+  dimension: usa_state_longitude {
+    type: number
+    sql: ${TABLE}.usa_state_longitude ;;
+  }
 
   measure: count {
     type: count
-    drill_fields: [state_id,zip,asset_id]
+    drill_fields: [asset_id,usa_state,usa_state_code,usa_state_latitude,usa_state_longitude]
   }
 }
