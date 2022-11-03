@@ -39,6 +39,6 @@ view: asset_data {
 
   measure: count {
     type: count
-    drill_fields: []
+    drill_fields: [state,state_id,zip,zipcodes,asset_id]
   }
 }
