@@ -27,9 +27,9 @@ view: asset_data {
   }
 
   dimension: location {
+    type: location
     sql_latitude: ${usa_state_longitude} ;;
     sql_longitude: ${usa_state_longitude} ;;
-    sql: ${TABLE}.location ;;
   }
 
   # A measure is a field that uses a SQL aggregate function. Here are defined sum and average
