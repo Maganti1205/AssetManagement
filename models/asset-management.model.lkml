@@ -29,3 +29,4 @@ explore: oee{}
 explore: RUL{}
 explore: Material{}
 explore: asset_data {}
+explore: lat_long {}
