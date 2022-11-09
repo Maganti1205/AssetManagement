@@ -48,5 +48,10 @@ view: asset_data {
   measure: count {
     type: count
     drill_fields: [asset_id,usa_state,usa_state_code,location]
+    link: {
+      label: "Business Pulse By State Dashboard"
+      url: "https://imde.cloud.looker.com/dashboards/406"
+    }
+
   }
 }
