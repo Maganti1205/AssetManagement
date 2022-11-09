@@ -24,10 +24,7 @@ view: asset_data {
   dimension: state {
     type: string
     sql: ${TABLE}.usa_state_code ;;
-    link: {
-      label: "Asset Details"
-      url:  "https://www.google.com/search?q={{ 'looker' }}"
-    }
+
   }
 
   dimension: location {
