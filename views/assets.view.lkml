@@ -44,6 +44,6 @@ view: assets {
 
   measure: count {
     type: count
-    drill_fields: [state_name,location]
+    drill_fields: [state_code,state_name,location]
   }
 }
