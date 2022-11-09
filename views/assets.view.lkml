@@ -21,11 +21,11 @@ view: assets {
   # Click on the type parameter to see all the options in the Quick Help panel on the right.
 
 
+
   dimension: longitude {
     type: number
     sql: ${TABLE}.longitude ;;
   }
-
   dimension: location {
     type: location
     sql_latitude: ${latitude} ;;
@@ -44,6 +44,6 @@ view: assets {
 
   measure: count {
     type: count
-    drill_fields: [state_name]
+    drill_fields: [state_name,location]
   }
 }
