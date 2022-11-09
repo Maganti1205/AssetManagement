@@ -24,7 +24,10 @@ view: asset_data {
   dimension: state {
     type: string
     sql: ${TABLE}.usa_state_code ;;
-
+    link: {
+      label: "Asset Details"
+      url:  "https://imde.cloud.looker.com/dashboards/406?State+Code={{asset_data.state}}"
+    }
   }
 
   dimension: location {
