@@ -26,7 +26,7 @@ view: asset_data {
     sql: ${TABLE}.usa_state_code ;;
     link: {
       label: "Asset Details"
-      url: "https://imde.cloud.looker.com/dashboards/406?State+Code={{ _filters['asset_data.state'] | url_encode }}"
+      url: "https://imde.cloud.looker.com/dashboards/406??fields=asset_data.state"
     }
   }
 
