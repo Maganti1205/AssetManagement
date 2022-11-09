@@ -30,3 +30,4 @@ explore: RUL{}
 explore: Material{}
 explore: asset_data {}
 explore: assets {}
+explore : asset_info {}
