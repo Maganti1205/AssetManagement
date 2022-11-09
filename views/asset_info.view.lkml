@@ -57,23 +57,6 @@ view: asset_info {
   # A measure is a field that uses a SQL aggregate function. Here are defined sum and average
   # measures for this dimension, but you can also add measures of many different aggregates.
   # Click on the type parameter to see all the options in the Quick Help panel on the right.
-
-
-  dimension: longitude {
-    type: number
-    sql: ${TABLE}.longitude ;;
-  }
-
-  dimension: state_latitude {
-    type: number
-    sql: ${TABLE}.state_latitude ;;
-  }
-
-  dimension: state_longitude {
-    type: number
-    sql: ${TABLE}.state_longitude ;;
-  }
-
   dimension: location {
     type: location
     sql_latitude: ${latitude} ;;
@@ -85,6 +68,25 @@ view: asset_info {
     sql_longitude: ${state_longitude} ;;
   }
 
+  dimension: longitude {
+    type: number
+    sql: ${TABLE}.longitude ;;
+  }
+
+  dimension: state {
+    type: string
+    sql: ${TABLE}.state ;;
+  }
+
+  dimension: state_latitude {
+    type: number
+    sql: ${TABLE}.state_latitude ;;
+  }
+
+  dimension: state_longitude {
+    type: number
+    sql: ${TABLE}.state_longitude ;;
+  }
 
   dimension_group: warranty_expiry {
     type: time
@@ -103,6 +105,6 @@ view: asset_info {
 
   measure: count {
     type: count
-    drill_fields: []
+    drill_fields: [state,asset_category,asset_id,asset_type]
   }
 }
