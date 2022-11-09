@@ -50,7 +50,7 @@ view: asset_data {
     drill_fields: [asset_id,usa_state,usa_state_code,location]
     link: {
       label: "Business Pulse By State Dashboard"
-      url: "https://imde.cloud.looker.com/dashboards/406"
+      url: "https://imde.cloud.looker.com/dashboards/406/users?fields=users.state_code"
     }
 
   }
