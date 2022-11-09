@@ -21,7 +21,7 @@ view: asset_data {
     sql: ${TABLE}.usa_state ;;
   }
 
-  dimension: usa_state_code {
+  dimension: state {
     type: string
     sql: ${TABLE}.usa_state_code ;;
   }
@@ -47,10 +47,10 @@ view: asset_data {
 
   measure: count {
     type: count
-    drill_fields: [asset_id,usa_state,usa_state_code,location]
+    drill_fields: [asset_id,usa_state,state,location]
     link: {
       label: "Business Pulse By State Dashboard"
-      url: "https://imde.cloud.looker.com/dashboards/406?State+Code=usa_state_code"
+      url: "https://imde.cloud.looker.com/dashboards/406"
     }
 
   }
