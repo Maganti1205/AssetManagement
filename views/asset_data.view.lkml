@@ -34,6 +34,10 @@ view: asset_data {
   dimension: asset_id {
     type: string
     sql: ${TABLE}.asset_id ;;
+    link: {
+      label: "Asset Information"
+      url:  "https://imde.cloud.looker.com/dashboards/409?Asset+ID={{asset_data.asset_id}}"
+    }
   }
 
   dimension: asset_type {
@@ -64,6 +68,7 @@ view: asset_data {
   dimension: state_code {
     type: string
     sql: ${TABLE}.state_code ;;
+
   }
 
   dimension: state_name {
