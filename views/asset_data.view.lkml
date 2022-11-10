@@ -2,64 +2,88 @@
 view: asset_data {
   # The sql_table_name parameter indicates the underlying database table
   # to be used for all fields in this view.
-  sql_table_name: `general-demo-364117.Asset_Management_Demo.AssetData`
+  sql_table_name: `general-demo-364117.Asset_Management_Demo.Asset_Data`
     ;;
   # No primary key is defined for this view. In order to join this view in an Explore,
   # define primary_key: yes on a dimension that has no repeated values.
 
   # Here's what a typical dimension looks like in LookML.
   # A dimension is a groupable field that can be used to filter query results.
-  # This dimension will be called "Asset ID" in Explore.
+  # This dimension will be called "Age" in Explore.
 
-  dimension: asset_id {
-    type: string
-    sql: ${TABLE}.Asset_Id ;;
-    link: {
-      label: "Asset Information"
-      url:  "https://imde.cloud.looker.com/dashboards/409?Asset+ID={{asset_data.asset_id}}"
-    }
-
-
-
-  }
-
-  dimension: usa_state {
-    type: string
-    sql: ${TABLE}.usa_state ;;
-  }
-
-  dimension: state {
-    type: string
-    sql: ${TABLE}.usa_state_code ;;
-    link: {
-      label: "Asset Details"
-      url:  "https://imde.cloud.looker.com/dashboards/408?State+Code={{asset_data.state}}"
-    }
-  }
-
-  dimension: location {
-    type: location
-    sql_latitude: ${usa_state_latitude} ;;
-    sql_longitude: ${usa_state_longitude} ;;
+  dimension: age {
+    type: number
+    sql: ${TABLE}.age ;;
   }
 
   # A measure is a field that uses a SQL aggregate function. Here are defined sum and average
   # measures for this dimension, but you can also add measures of many different aggregates.
   # Click on the type parameter to see all the options in the Quick Help panel on the right.
 
-  dimension: usa_state_longitude {
-    type: number
-    sql: ${TABLE}.usa_state_longitude ;;
+  dimension: location {
+    type: location
+    sql_latitude: ${latitude} ;;
+    sql_longitude: ${longitude} ;;
   }
+  dimension: statelocation {
+    type: location
+    sql_latitude: ${usa_state_latitude} ;;
+    sql_longitude: ${usa_state_longitude} ;;
+  }
+
+  dimension: asset_id {
+    type: string
+    sql: ${TABLE}.asset_id ;;
+  }
+
+  dimension: asset_type {
+    type: string
+    sql: ${TABLE}.asset_type ;;
+  }
+
+  dimension: healthscore {
+    type: number
+    sql: ${TABLE}.healthscore ;;
+  }
+
+  dimension: is_underwarranty {
+    type: string
+    sql: ${TABLE}.is_underwarranty ;;
+  }
+
+  dimension: latitude {
+    type: number
+    sql: ${TABLE}.latitude ;;
+  }
+
+  dimension: longitude {
+    type: number
+    sql: ${TABLE}.longitude ;;
+  }
+
+  dimension: state_code {
+    type: string
+    sql: ${TABLE}.state_code ;;
+  }
+
+  dimension: state_name {
+    type: string
+    sql: ${TABLE}.state_name ;;
+  }
+
+
   dimension: usa_state_latitude {
     type: number
     sql: ${TABLE}.usa_state_latitude ;;
   }
 
+  dimension: usa_state_longitude {
+    type: number
+    sql: ${TABLE}.usa_state_longitude ;;
+  }
+
   measure: count {
     type: count
-    drill_fields: [asset_id,usa_state,state,location]
-
-
+    drill_fields: [state_name]
   }
 }
