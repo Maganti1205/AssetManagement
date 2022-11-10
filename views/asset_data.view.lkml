@@ -14,6 +14,13 @@ view: asset_data {
   dimension: asset_id {
     type: string
     sql: ${TABLE}.Asset_Id ;;
+    link: {
+      label: "Asset Information"
+      url:  "https://imde.cloud.looker.com/dashboards/409?Asset+ID={{asset_data.asset_id}}"
+    }
+
+
+
   }
 
   dimension: usa_state {
