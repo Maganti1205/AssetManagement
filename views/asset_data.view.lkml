@@ -68,6 +68,11 @@ view: asset_data {
   dimension: state_code {
     type: string
     sql: ${TABLE}.state_code ;;
+    link: {
+      label: "Asset Information"
+      url:  "https://imde.cloud.looker.com/dashboards/412?State+Code={{asset_data.state_code}}"
+    }
+
 
   }
 
