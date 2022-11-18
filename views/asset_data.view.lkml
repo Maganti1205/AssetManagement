@@ -48,6 +48,12 @@ view: asset_data {
   dimension: healthscore {
     type: number
     sql: ${TABLE}.healthscore ;;
+    link: {
+      label: "Engine Health"
+      url:  "https://imde.cloud.looker.com/dashboards/419"
+    }
+
+
   }
 
   dimension: is_underwarranty {
