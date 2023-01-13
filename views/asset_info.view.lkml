@@ -48,6 +48,30 @@ view: asset_info {
     sql: ${TABLE}.asset_type ;;
   }
 
+  dimension: firmware {
+    type: string
+    sql: ${TABLE}.firmware_version ;;
+  }
+  dimension: battery {
+    type: number
+    sql: ${TABLE}.Battery ;;
+  }
+  dimension: failures {
+    type: number
+    sql: ${TABLE}.Failures ;;
+  }
+
+  dimension:airfilter {
+    type: number
+    sql: ${TABLE}.Air_Filter ;;
+  }
+
+  dimension:fuelfilter {
+    type: number
+    sql: ${TABLE}.Fuel_Filter ;;
+  }
+
+
   dimension: customer_id {
     type: string
     sql: ${TABLE}.customer_id ;;
@@ -91,6 +115,45 @@ view: asset_info {
     type: number
     sql: ${TABLE}.state_longitude ;;
   }
+  dimension: asset_status {
+    type: string
+    sql: ${TABLE}.asset_status ;;
+  }
+  dimension: fuel_level {
+    type: number
+    sql: ${TABLE}.fuel_level ;;
+  }
+  dimension: battery_health {
+    type: number
+    sql: ${TABLE}.battery_health ;;
+  }
+  dimension: Sustainability {
+    type: number
+    sql: ${TABLE}.Sustainability ;;
+  }
+  dimension: Alert {
+    type: string
+    sql: ${TABLE}.Alert;;
+    html:
+    <p><img src="https://findicons.com/files/icons/2077/free_common/64/exclamation5.png" height=20 width=20>{{ Alert }}</p>
+    ;;
+  }
+  dimension: Priority {
+    type: string
+    sql: ${TABLE}.Priority ;;
+  }
+  dimension: Alerts {
+
+    type: string
+
+    html: <div style="white-space:pre">{{ value }}</div> ;;
+
+    sql: concat(${asset_id},  "\n\r" , ${Alert}) ;;
+
+  }
+
+
+
 
   dimension_group: warranty_expiry {
     type: time
@@ -107,8 +170,10 @@ view: asset_info {
     sql: ${TABLE}.warranty_expiry_date ;;
   }
 
+
+
   measure: count {
     type: count
-    drill_fields: [state,asset_category,asset_id,asset_type]
+    drill_fields: [state,asset_category,asset_id,asset_type,asset_status]
   }
 }

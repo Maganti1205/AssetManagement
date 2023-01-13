@@ -32,3 +32,6 @@ explore: asset_data {}
 explore: assets {}
 explore :asset_info {}
 explore: asset_components {}
+explore: asset_final {}
+explore: assettelemetry {}
+explore: asset_actions {}

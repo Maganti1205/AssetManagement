@@ -36,7 +36,7 @@ view: asset_data {
     sql: ${TABLE}.asset_id ;;
     link: {
       label: "Asset Information"
-      url:  "https://imde.cloud.looker.com/dashboards/409?Asset+ID={{asset_data.asset_id}}"
+      url:  "/dashboards/409?Asset+ID={{asset_data.asset_id}}"
     }
   }
 
@@ -48,10 +48,6 @@ view: asset_data {
   dimension: healthscore {
     type: number
     sql: ${TABLE}.healthscore ;;
-    link: {
-      label: "Engine Health"
-      url:  "https://imde.cloud.looker.com/dashboards/419"
-    }
 
 
   }
@@ -74,10 +70,6 @@ view: asset_data {
   dimension: state_code {
     type: string
     sql: ${TABLE}.state_code ;;
-    link: {
-      label: "Asset Information"
-      url:  "https://imde.cloud.looker.com/dashboards/412?State+Code={{asset_data.state_code}}"
-    }
 
 
   }
