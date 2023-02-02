@@ -69,6 +69,8 @@ view: asset_info {
   dimension:fuelfilter {
     type: number
     sql: ${TABLE}.Fuel_Filter ;;
+    html:
+    <p><img src="https://storage.cloud.google.com/asset-management-demo/Fuel%20Filter.jpeg" height=25 width=25>{{ fuelfilter }}</p> ;;
   }
 
 
@@ -119,8 +121,8 @@ view: asset_info {
     type: string
     sql: ${TABLE}.asset_status ;;
   }
-  dimension: fuel_level {
-    type: number
+  measure: fuel_level {
+    type: average
     sql: ${TABLE}.fuel_level ;;
   }
   dimension: battery_health {
@@ -135,7 +137,7 @@ view: asset_info {
     type: string
     sql: ${TABLE}.Alert;;
     html:
-    <p><img src="https://findicons.com/files/icons/2077/free_common/64/exclamation5.png" height=20 width=20>{{ Alert }}</p>
+    <p><img src="https://storage.cloud.google.com/asset-management-demo/error.png" height=15 width=15>{{ Alert }}</p>
     ;;
   }
   dimension: Priority {
