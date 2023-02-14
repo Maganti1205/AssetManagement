@@ -90,8 +90,25 @@ view: asset_data {
     sql: ${TABLE}.usa_state_longitude ;;
   }
 
+  measure: asset_utilization {
+    type: number
+    sql: 85 ;;
+  }
+
+  measure: total_alerts {
+    type: number
+    sql: 189 ;;
+  }
+
+  measure: asset_availability {
+    type: number
+    sql: 70 ;;
+  }
+
   measure: count {
     type: count
     drill_fields: [state_name]
   }
+
+
 }
