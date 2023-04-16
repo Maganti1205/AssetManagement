@@ -40,14 +40,6 @@ view: asset_data {
     }
   }
 
-  dimension: dummy{
-    type: string
-    sql: "General" ;;
-    link: {
-      label: "Asset Information"
-      url:  "/dashboards/409?Asset+ID={{asset_data.asset_id}}"
-    }
-  }
 
   dimension: asset_type {
     type: string
