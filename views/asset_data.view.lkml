@@ -42,6 +42,7 @@ view: asset_data {
 
   dimension: dummy{
     type: string
+    sql:  ;;
     link: {
       label: "Asset Information"
       url:  "/dashboards/409?Asset+ID={{asset_data.asset_id}}"
