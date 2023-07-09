@@ -62,7 +62,7 @@ view: assettelemetry {
 
   dimension: cycle {
     type: number
-    sql: ${TABLE}.rn ;;
+    sql: ${TABLE}.Cycle ;;
   }
 
   measure: speed {
