@@ -108,7 +108,7 @@ view: assettelemetry {
 
   measure: engineefficiency {
     type: average
-    sql: ${TABLE}.Engine_Efficiency
+    sql: ${TABLE}.EngineEfficiency
       ;;
   }
   dimension: elevation {
