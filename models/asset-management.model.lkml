@@ -1,5 +1,5 @@
 # Define the database connection to be used for this model.
-connection: "purnima-asset-management"
+connection: "asset-management"
 
 # include all the views
 include: "/views/**/*.view"
