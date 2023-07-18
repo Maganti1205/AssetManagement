@@ -36,3 +36,4 @@ explore: asset_final {}
 explore: assettelemetry {}
 explore: asset_actions {}
 explore: asset_alerts {}
+explore: flooded_roads {}
