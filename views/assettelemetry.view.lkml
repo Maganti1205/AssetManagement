@@ -114,7 +114,7 @@ view: assettelemetry {
   dimension: elevation {
     type: string
     sql: ${TABLE}.elev_img;;
-    html: <img src="https://storage.mtls.cloud.google.com/asset_managgement_demo/Power%20Generator.jpeg" /> ;;
+    html: <img src="https://storage.mtls.cloud.google.com/asset-management-demo-latest/Power%20Generator%20(1).jpeg" /> ;;
   }
 
   # Dates and timestamps can be represented in Looker using a dimension group of type: time.
