@@ -2,7 +2,7 @@
 view: assettelemetry {
   # The sql_table_name parameter indicates the underlying database table
   # to be used for all fields in this view.
-  sql_table_name: `general-demo-364117.demo.Assettelemetry`
+  sql_table_name: `my-demo-project-360918.Asset_Management_Demo.AssetTelemetry_v`
     ;;
   # No primary key is defined for this view. In order to join this view in an Explore,
   # define primary_key: yes on a dimension that has no repeated values.
@@ -48,7 +48,7 @@ view: assettelemetry {
   }
   measure: current {
     type: average
-    sql: ${TABLE}.current;;
+    sql: ${TABLE}.curr;;
   }
   measure: load {
     type: average
@@ -62,7 +62,7 @@ view: assettelemetry {
 
   dimension: cycle {
     type: number
-    sql: ${TABLE}.rn ;;
+    sql: ${TABLE}.Cycle ;;
   }
 
   measure: speed {
@@ -108,13 +108,13 @@ view: assettelemetry {
 
   measure: engineefficiency {
     type: average
-    sql: ${TABLE}.Engine_Efficiency
+    sql: ${TABLE}.EngineEfficiency
       ;;
   }
   dimension: elevation {
     type: string
     sql: ${TABLE}.elev_img;;
-    html: <img src="https://storage.cloud.google.com/asset-management-demo/Power%20Generator.jpeg" /> ;;
+    html: <img src="https://storage.mtls.cloud.google.com/asset-management-demo-latest/Power%20Generator%20(1).jpeg" /> ;;
   }
 
   # Dates and timestamps can be represented in Looker using a dimension group of type: time.

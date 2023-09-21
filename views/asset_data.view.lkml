@@ -2,7 +2,7 @@
 view: asset_data {
   # The sql_table_name parameter indicates the underlying database table
   # to be used for all fields in this view.
-  sql_table_name: `general-demo-364117.Asset_Management_Demo.Asset_Data`
+  sql_table_name: `my-demo-project-360918.Asset_Management_Demo.Asset_Data`
     ;;
   # No primary key is defined for this view. In order to join this view in an Explore,
   # define primary_key: yes on a dimension that has no repeated values.
@@ -39,6 +39,7 @@ view: asset_data {
       url:  "/dashboards/409?Asset+ID={{asset_data.asset_id}}"
     }
   }
+
 
   dimension: asset_type {
     type: string
