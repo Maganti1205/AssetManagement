@@ -15,7 +15,7 @@ view: asset_alerts {
     type: string
     sql: ${TABLE}.alert ;;
     html:
-    {% if type._value == "Shutdown" %}
+    {% if type._value == "Shutdow" %}
 
       <p><img src="https://findicons.com/files/icons/719/crystal_clear_actions/64/cancel.png" height=15 width=15>{{ alert }}</p>
 
