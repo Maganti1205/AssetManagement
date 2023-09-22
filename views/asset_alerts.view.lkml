@@ -21,7 +21,7 @@ view: asset_alerts {
 
     {% else %}
 
-      <p><img src="https://storage.mtls.cloud.google.com/asset-management-demo-latest/Warning%20(1).jpeg" height=15 width=15>{{ alert }}</p>
+      <p><img src="https://storage.googleapis.com/asset-management-demo-latest/Warning%20(1).jpeg" height=15 width=15>{{ alert }}</p>
 
     {% endif %} ;;
 
