@@ -17,11 +17,11 @@ view: asset_alerts {
     html:
     {% if type._value == "Shutdown" %}
 
-      <p><img src="https://storage.googleapis.com/asset-management-demo-latest/Error%20(1).jpeg" height=15 width=15>{{ alert }}</p>
+      <p><img src="https://findicons.com/files/icons/719/crystal_clear_actions/64/cancel.png" height=15 width=15>{{ alert }}</p>
 
     {% else %}
 
-       <p><img src="https://storage.googleapis.com/asset-management-demo-latest/Warning%20(1).jpeg" height=15 width=15>{{ alert }}</p>
+       <p><img src="https://findicons.com/files/icons/719/crystal_clear_actions/64/cancel.png" height=15 width=15>{{ alert }}</p>
 
     {% endif %} ;;
 
