@@ -137,7 +137,7 @@ view: asset_info {
     type: string
     sql: ${TABLE}.Alert;;
     html:
-    <p><img src="https://storage.cloud.google.com/asset-management-demo/error.png" height=15 width=15>{{ Alert }}</p>
+    <p><img src="https://storage.googleapis.com/asset-management-demo-latest/Error%20(1).jpeg" height=15 width=15>{{ Alert }}</p>
     ;;
   }
   dimension: Priority {
